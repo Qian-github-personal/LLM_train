@@ -1,11 +1,18 @@
 {
+
+   "ruigu":{"file_name":"ruigu.json",
+    "columns":{"prompt": "instruction",
+      		   "query": "input",
+                "response": "output",
+                "history": "history"}},
+
   "alpaca_en": {
     "file_name": "alpaca_data_en_52k.json",
     "file_sha1": "607f94a7f581341e59685aef32f531095232cf23"
   },
   "alpaca_zh": {
     "file_name": "alpaca_data_zh_51k.json",
-    "file_sha1": "0016a4df88f523aad8dc004ada7575896824a0dc"
+    "file_sha1": "e655af3db557a4197f7b0cf92e1986b08fae6311"
   },
   "alpaca_gpt4_en": {
     "file_name": "alpaca_gpt4_data_en.json",
@@ -47,15 +54,6 @@
       "query": "input",
       "response": "output",
       "history": "history"
-    }
-  },
-  "glaive_toolcall": {
-    "file_name": "glaive_toolcall_10k.json",
-    "file_sha1": "a6917b85d209df98d31fdecb253c79ebc440f6f3",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "tools": "tools"
     }
   },
   "example": {
@@ -120,9 +118,6 @@
       "system": "system_prompt"
     }
   },
-  "slimorca": {
-    "hf_hub_url": "Open-Orca/SlimOrca"
-  },
   "mathinstruct": {
     "hf_hub_url": "TIGER-Lab/MathInstruct",
     "ms_hub_url": "AI-ModelScope/MathInstruct",
@@ -138,13 +133,6 @@
       "response": "target"
     }
   },
-  "wikiqa": {
-    "hf_hub_url": "wiki_qa",
-    "columns": {
-      "prompt": "question",
-      "response": "answer"
-    }
-  },
   "webqa": {
     "hf_hub_url": "suolyer/webqa",
     "ms_hub_url": "AI-ModelScope/webqa",
@@ -158,8 +146,7 @@
     "ms_hub_url": "AI-ModelScope/webnovel_cn"
   },
   "nectar_sft": {
-    "hf_hub_url": "mlinmg/SFT-Nectar",
-    "ms_hub_url": "AI-ModelScope/SFT-Nectar"
+    "hf_hub_url": "mlinmg/SFT-Nectar"
   },
   "deepctrl": {
     "ms_hub_url": "deepctrl/deepctrl-sft-data"
@@ -185,13 +172,9 @@
     "hf_hub_url": "HuggingFaceH4/ultrachat_200k",
     "ms_hub_url": "AI-ModelScope/ultrachat_200k",
     "columns": {
-      "messages": "messages"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
+      "messages": "messages",
+      "role": "role",
+      "content": "content"
     },
     "formatting": "sharegpt"
   },
@@ -204,47 +187,15 @@
     "hf_hub_url": "lmsys/lmsys-chat-1m",
     "ms_hub_url": "AI-ModelScope/lmsys-chat-1m",
     "columns": {
-      "messages": "conversation"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "human",
-      "assistant_tag": "assistant"
+      "messages": "conversation",
+      "role": "role",
+      "content": "content"
     },
     "formatting": "sharegpt"
   },
   "evol_instruct": {
     "hf_hub_url": "WizardLM/WizardLM_evol_instruct_V2_196k",
-    "ms_hub_url": "AI-ModelScope/WizardLM_evol_instruct_V2_196k",
     "formatting": "sharegpt"
-  },
-  "oasst_de": {
-    "hf_hub_url": "mayflowergmbh/oasst_de"
-  },
-  "dolly_15k_de": {
-    "hf_hub_url": "mayflowergmbh/dolly-15k_de"
-  },
-  "alpaca-gpt4_de": {
-    "hf_hub_url": "mayflowergmbh/alpaca-gpt4_de"
-  },
-  "openschnabeltier_de": {
-    "hf_hub_url": "mayflowergmbh/openschnabeltier_de"
-  },
-  "evol_instruct_de": {
-    "hf_hub_url": "mayflowergmbh/evol-instruct_de"
-  },
-  "dolphin_de": {
-    "hf_hub_url": "mayflowergmbh/dolphin_de"
-  },
-  "booksum_de": {
-    "hf_hub_url": "mayflowergmbh/booksum_de"
-  },
-  "airoboros_de": {
-    "hf_hub_url": "mayflowergmbh/airoboros-3.0_de"
-  },
-  "ultrachat_de": {
-    "hf_hub_url": "mayflowergmbh/ultra-chat_de"
   },
   "hh_rlhf_en": {
     "script_url": "hh_rlhf_en",
@@ -289,11 +240,6 @@
   },
   "nectar_rm": {
     "hf_hub_url": "mlinmg/RLAIF-Nectar",
-    "ms_hub_url": "AI-ModelScope/RLAIF-Nectar",
-    "ranking": true
-  },
-  "orca_dpo_de" : {
-    "hf_hub_url": "mayflowergmbh/intel_orca_dpo_pairs_de",
     "ranking": true
   },
   "wiki_demo": {
@@ -325,7 +271,6 @@
   },
   "wikipedia_en": {
     "hf_hub_url": "olm/olm-wikipedia-20221220",
-    "ms_hub_url": "AI-ModelScope/olm-wikipedia-20221220",
     "columns": {
       "prompt": "text"
     }
@@ -339,7 +284,6 @@
   },
   "pile": {
     "hf_hub_url": "EleutherAI/pile",
-    "ms_hub_url": "AI-ModelScope/pile",
     "columns": {
       "prompt": "text"
     },
@@ -347,7 +291,6 @@
   },
   "skypile": {
     "hf_hub_url": "Skywork/SkyPile-150B",
-    "ms_hub_url": "AI-ModelScope/SkyPile-150B",
     "columns": {
       "prompt": "text"
     }
